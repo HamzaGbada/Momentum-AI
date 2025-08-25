@@ -31,15 +31,15 @@
     <!-- Header -->
     <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white">
+            <a href="javascript:void(0);" onclick="showPage('main-content')" class="text-2xl font-bold text-white">
                 <i class="fas fa-bolt mr-2 text-blue-500"></i>Momentum AI
             </a>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#solutions" class="text-gray-400 hover:text-white transition">Solutions</a>
-                <a href="#why-us" class="text-gray-400 hover:text-white transition">Why Us</a>
-                <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+                <a href="#solutions" onclick="showPage('main-content')" class="text-gray-400 hover:text-white transition">Solutions</a>
+                <a href="#why-us" onclick="showPage('main-content')" class="text-gray-400 hover:text-white transition">Why Us</a>
+                <a href="#contact" onclick="showPage('main-content')" class="text-gray-400 hover:text-white transition">Contact</a>
             </div>
-            <a href="#contact" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg transition">
+            <a href="#contact" onclick="showPage('main-content')" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-lg transition">
                 Request a Demo
             </a>
             <button id="mobile-menu-button" class="md:hidden text-2xl">
@@ -47,16 +47,17 @@
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
-            <a href="#solutions" class="block text-gray-400 hover:text-white transition">Solutions</a>
-            <a href="#why-us" class="block text-gray-400 hover:text-white transition">Why Us</a>
-            <a href="#contact" class="block text-gray-400 hover:text-white transition">Contact</a>
-            <a href="#contact" class="block bg-blue-600 hover:bg-blue-700 text-white font-semibold mt-2 px-5 py-2 rounded-lg transition text-center">
+            <a href="#solutions" onclick="showPage('main-content')" class="block text-gray-400 hover:text-white transition">Solutions</a>
+            <a href="#why-us" onclick="showPage('main-content')" class="block text-gray-400 hover:text-white transition">Why Us</a>
+            <a href="#contact" onclick="showPage('main-content')" class="block text-gray-400 hover:text-white transition">Contact</a>
+            <a href="#contact" onclick="showPage('main-content')" class="block bg-blue-600 hover:bg-blue-700 text-white font-semibold mt-2 px-5 py-2 rounded-lg transition text-center">
                 Request a Demo
             </a>
         </div>
     </header>
 
-    <main>
+    <!-- Main Content / Home Page -->
+    <main id="main-content">
 
         <!-- Hero Section -->
         <section class="py-20 md:py-32">
@@ -88,7 +89,7 @@
                            <p class="text-gray-400 mt-1">Use any LLM with zero data risk.</p>
                         </div>
                         <p class="text-gray-300 flex-grow">Unlock the power of world-class LLMs like GPT-4 and Claude without sending sensitive PII, financial data, or client information outside your network. Our on-premise gateway automatically redacts and secures your prompts.</p>
-                        <a href="#" class="mt-6 text-blue-400 font-semibold hover:text-blue-300 transition">Learn More &rarr;</a>
+                        <a href="javascript:void(0);" onclick="showPage('sanctuary-details')" class="mt-6 text-blue-400 font-semibold hover:text-blue-300 transition">Learn More &rarr;</a>
                     </div>
                     <!-- Solution 2: AI AgentForge -->
                     <div class="bg-gray-800 p-8 rounded-lg flex flex-col">
@@ -97,7 +98,7 @@
                            <p class="text-gray-400 mt-1">Custom AI agents at infinite scale.</p>
                         </div>
                         <p class="text-gray-300 flex-grow">We design, build, and deploy intelligent AI agents tailored to your specific business needs. From complex customer support to automated internal workflows, our agents perform flawlessly at enterprise scale.</p>
-                        <a href="#" class="mt-6 text-purple-400 font-semibold hover:text-purple-300 transition">Learn More &rarr;</a>
+                        <a href="javascript:void(0);" onclick="showPage('agentforge-details')" class="mt-6 text-purple-400 font-semibold hover:text-purple-300 transition">Learn More &rarr;</a>
                     </div>
                     <!-- Solution 3: OpsPilot AI -->
                     <div class="bg-gray-800 p-8 rounded-lg flex flex-col">
@@ -106,7 +107,7 @@
                            <p class="text-gray-400 mt-1">Intelligent AIOps for modern stacks.</p>
                         </div>
                         <p class="text-gray-300 flex-grow">Go from alert to resolution in seconds. OpsPilot is the intelligent AIOps platform that automatically detects production issues, identifies the root cause, and triggers the right action, freeing your team to build.</p>
-                        <a href="#" class="mt-6 text-green-400 font-semibold hover:text-green-300 transition">Learn More &rarr;</a>
+                        <a href="javascript:void(0);" onclick="showPage('opspilot-details')" class="mt-6 text-green-400 font-semibold hover:text-green-300 transition">Learn More &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -207,6 +208,61 @@
 
     </main>
 
+    <!-- Sanctuary Gateway Details Page -->
+    <div id="sanctuary-details" class="hidden">
+        <main>
+            <section class="py-20 md:py-32">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                        Use GPT-4, Claude & Gemini <br class="hidden md:block"> With <span class="gradient-text">Zero Data Risk.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                        Unlock the power of world-class LLMs without sending sensitive PII, financial data, or client information outside your network. Sanctuary AI is the on-premise gateway that automatically redacts and secures your prompts.
+                    </p>
+                    <a href="javascript:void(0);" onclick="showPage('main-content')" class="text-blue-400 font-semibold hover:text-blue-300 transition">&larr; Back to Solutions</a>
+                </div>
+            </section>
+            <!-- Add more detailed sections from the original Sanctuary AI page here -->
+        </main>
+    </div>
+
+    <!-- AI AgentForge Details Page -->
+    <div id="agentforge-details" class="hidden">
+        <main>
+            <section class="py-20 md:py-32">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                        Custom AI Agents. <br class="hidden md:block"> <span class="gradient-text">Infinite Scale.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                        We design, build, and deploy intelligent AI agents tailored to your specific business needs. From complex customer support to automated internal workflows, our agents perform flawlessly at enterprise scale.
+                    </p>
+                    <a href="javascript:void(0);" onclick="showPage('main-content')" class="text-purple-400 font-semibold hover:text-purple-300 transition">&larr; Back to Solutions</a>
+                </div>
+            </section>
+            <!-- Add more detailed sections from the original AgentForge page here -->
+        </main>
+    </div>
+
+    <!-- OpsPilot AI Details Page -->
+    <div id="opspilot-details" class="hidden">
+        <main>
+            <section class="py-20 md:py-32">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                        Go From Alert to Resolution <br class="hidden md:block"> in <span class="gradient-text">90 Seconds.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                        Stop firefighting. OpsPilot AI is the intelligent AIOps platform that automatically detects production issues, identifies the root cause, and triggers the right action, letting your engineering team get back to building.
+                    </p>
+                     <a href="javascript:void(0);" onclick="showPage('main-content')" class="text-green-400 font-semibold hover:text-green-300 transition">&larr; Back to Solutions</a>
+                </div>
+            </section>
+            <!-- Add more detailed sections from the original OpsPilot page here -->
+        </main>
+    </div>
+
+
     <!-- Footer -->
     <footer class="bg-gray-800/50 border-t border-gray-800">
         <div class="container mx-auto px-6 py-8 text-center text-gray-500">
@@ -221,6 +277,20 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        const pages = ['main-content', 'sanctuary-details', 'agentforge-details', 'opspilot-details'];
+
+        function showPage(pageId) {
+            pages.forEach(id => {
+                const page = document.getElementById(id);
+                if (id === pageId) {
+                    page.classList.remove('hidden');
+                } else {
+                    page.classList.add('hidden');
+                }
+            });
+            window.scrollTo(0, 0);
+        }
     </script>
 </body>
 </html>
